@@ -28,6 +28,9 @@ int main(void) {
 			cnt++;
 		}
 	}
+	if(cnt == 0x00) {
+		cnt = 0x80;
+	}
 	PORTC = cnt;
     }
     return 1;
