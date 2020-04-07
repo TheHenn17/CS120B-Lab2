@@ -1,10 +1,7 @@
-Breakpoint 1 at 0xf2: file source/main.c, line 25.
+Breakpoint 1 at 0xf2: file source/main.c, line 28.
 Note: automatically using hardware breakpoints for read-only addresses.
 ======================================================
 Running all tests..."
 
-"Under 140, balanced"..."Under 140, unbalanced"...
-	Expected 0x02 
-	PORTD '0x80002b:	0x00
-======================================================
+"Total 0"..."Total 140, balanced"..."Total 100, negatively unbalanced"..."Total 100, positively unbalanced"..."Total 150, balanced"..."Total 300, balanced"..."Total 200, negatively unbalanced"..."Total 200, positively unbalanced"..."Total 450, balanced"..."Total 400, negatively unbalanced"..."Total 400, positively unbalanced"..."Total 600, balanced"..."Total 500, negatively unbalanced"..."Total 500, positively unbalanced"..."Total 750, balanced"..."Total 650, negatively unbalanced"..."Total 650, positively unbalanced"..."Total 765"...======================================================
 Remote doesn't know how to detach
