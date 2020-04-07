@@ -31,7 +31,7 @@ setPINA 0x00
 setPINB 0x00
 setPINC 0x00
 continue 5
-expectPORTD 0x04
+expectPORTD 0x00
 checkResult
 
 test "Total 140, balanced"
@@ -39,7 +39,7 @@ setPINA 0x28
 setPINB 0x3C
 setPINC 0x28
 continue 5
-expectPORTD 0x04
+expectPORTD 0x20
 checkResult
 
 test "Total 100, negatively unbalanced"
@@ -47,7 +47,7 @@ setPINA 0x01
 setPINB 0x0F
 setPINC 0x54
 continue 5
-expectPORTD 0x06
+expectPORTD 0x1A
 checkResult
 
 test "Total 100, positively unbalanced"
@@ -55,7 +55,7 @@ setPINA 0x54
 setPINB 0x0F
 setPINC 0x01
 continue 5
-expectPORTD 0x06
+expectPORTD 0x1A
 checkResult
 
 test "Total 150, balanced"
@@ -63,7 +63,7 @@ setPINA 0x32
 setPINB 0x32
 setPINC 0x31
 continue 5
-expectPORTD 0x05
+expectPORTD 0x25
 checkResult
 
 test "Total 300, balanced"
@@ -71,7 +71,7 @@ setPINA 0x64
 setPINB 0x64
 setPINC 0x64
 continue 5
-expectPORTD 0x09
+expectPORTD 0x49
 checkResult
 
 test "Total 200, negatively unbalanced"
@@ -79,7 +79,7 @@ setPINA 0x01
 setPINB 0x75
 setPINC 0x52
 continue 5
-expectPORTD 0x0B
+expectPORTD 0x33
 checkResult
 
 test "Total 200, positively unbalanced"
@@ -87,7 +87,7 @@ setPINA 0x52
 setPINB 0x75
 setPINC 0x01
 continue 5
-expectPORTD 0x0B
+expectPORTD 0x33
 checkResult
 
 test "Total 450, balanced"
@@ -95,7 +95,7 @@ setPINA 0xC8
 setPINB 0x82
 setPINC 0x78
 continue 5
-expectPORTD 0x11
+expectPORTD 0x71
 checkResult
 
 test "Total 400, negatively unbalanced"
@@ -103,7 +103,7 @@ setPINA 0x00
 setPINB 0xC8
 setPINC 0xC8
 continue 5
-expectPORTD 0x13
+expectPORTD 0x67
 checkResult
 
 test "Total 400, positively unbalanced"
@@ -111,7 +111,7 @@ setPINA 0xC8
 setPINB 0xC8
 setPINC 0x00
 continue 5
-expectPORTD 0x13
+expectPORTD 0x67
 checkResult
 
 test "Total 600, balanced"
@@ -119,7 +119,7 @@ setPINA 0xC8
 setPINB 0xC8
 setPINC 0xC8
 continue 5
-expectPORTD 0x21
+expectPORTD 0x95
 checkResult
 
 test "Total 500, negatively unbalanced"
@@ -127,7 +127,7 @@ setPINA 0x96
 setPINB 0x64
 setPINC 0xFA
 continue 5
-expectPORTD 0x23
+expectPORTD 0x7f
 checkResult
 
 test "Total 500, positively unbalanced"
@@ -135,7 +135,7 @@ setPINA 0xFA
 setPINB 0x64
 setPINC 0x96
 continue 5
-expectPORTD 0x23
+expectPORTD 0x7f
 checkResult
 
 test "Total 750, balanced"
@@ -143,7 +143,7 @@ setPINA 0xFA
 setPINB 0xFA
 setPINC 0xFA
 continue 5
-expectPORTD 0x41
+expectPORTD 0xb9
 checkResult
 
 test "Total 650, negatively unbalanced"
@@ -151,7 +151,7 @@ setPINA 0xA9
 setPINB 0xCC
 setPINC 0xFA
 continue 5
-expectPORTD 0x43
+expectPORTD 0x9b
 checkResult
 
 test "Total 650, positively unbalanced"
@@ -159,7 +159,7 @@ setPINA 0xFA
 setPINB 0xCC
 setPINC 0xA9
 continue 5
-expectPORTD 0x43
+expectPORTD 0x9b
 checkResult
 
 test "Total 765"
@@ -167,7 +167,7 @@ setPINA 0xFF
 setPINB 0xFF
 setPINC 0xFF
 continue 5
-expectPORTD 0x81
+expectPORTD 0xbd
 checkResult
 
 # Report on how many tests passed/tests ran

@@ -31,39 +31,16 @@ int main(void) {
 	tempC = PINC;
 	tempD = 0x00;
 	weight = tempA + tempB + tempC;
-	//checks weight to see if it exceeds maximum
 	if(weight > 140) {
 		tempD = tempD | 0x01;
 	}
 	diff = tempA - tempC;
-	//checks diff to see if it is 80 or more
 	if((diff > 80) || (diff < -80)) {
 		tempD = tempD | 0x02;
 	}
-	//PD2 lights up if the total weight is under 150 kg
-	if(weight <= 150) {
-		tempD = tempD | 0x04;
-	}
-	//PD3 lights up if the total weight is between 300-151
-	else if ((weight <= 300) && (weight > 150)) {
-		tempD = tempD | 0x08;
-	}
-	//PD4 lights up if the total weight is between 450-301
-	else if ((weight <= 450) && (weight > 300)) {
-                tempD = tempD | 0x10;
-        }
-	//PD5 lights up if the total weight is between 600-451
-	else if ((weight <= 600) && (weight > 450)) {
-                tempD = tempD | 0x20;
-        }
-	//PD6 lights up if the total weight is between 750-601
-	else if ((weight <= 750) && (weight > 600)) {
-                tempD = tempD | 0x40;
-        }
-	//PD7 lights up if the total weight is above 751 kg
-	else  {
-		tempD = tempD | 0x80;
-	}
+	weight = weight >> 4;
+	weight = weight << 2;
+	tempD = weight | tempD;
 	PORTD = tempD;
     }
     return 1;
