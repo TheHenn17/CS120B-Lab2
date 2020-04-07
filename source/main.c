@@ -15,23 +15,25 @@
 int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF;
-	DDRC = 0xFF; PORTC = 0x00;
+	DDRB = 0x00; PORTB = 0xFF;
+	DDRC = 0x00; PORTC = 0xFF;
+	DDRD = 0xFF; PORTD = 0x00;
     /* Insert your solution below */
-	unsigned char cnt;
-	unsigned char i;
-	unsigned char tempA = 0x00;
+	signed char diff;
+	unsigned char tempD;
+	unsigned short weight;
     while (1) {
-	cnt = 0x00;
-	tempA = PINA & 0x0F;
-	for(i = 0; i < 4; ++i) {
-		if(!(PINA & (0x01 << i))) {
-			cnt++;
-		}
-	}
-	if(cnt == 0x00) {
-		cnt = 0x80;
-	}
-	PORTC = cnt;
+	tempD = 0x00;
+	//weight = PINA + PINB;
+	//weight = PINC + weight;
+	//if(weight > 140) {
+	//	tempD = tempD | 0x01;
+	//}
+	//diff = PINA - PINC;
+	//if((diff > 80) || (diff < -80)) {
+	//	tempD = tempD | 0x02;
+	//}
+	PORTD = tempD;
     }
     return 1;
 }
